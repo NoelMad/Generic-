@@ -19,5 +19,9 @@ public class Main {
 
         PokemonOnlyBox<Pokemon> b1 = new PokemonOnlyBox<>(pikachu);
         System.out.println(b1.getType());
+
+        BattlePokemon squirtle = new BattlePokemon("Squirtle", "Water", 60);
+        PokemonOnlyBox<BattlePokemon> battleBox = new PokemonOnlyBox<>(squirtle);
+        System.out.println(battleBox.get());
     }
 }
