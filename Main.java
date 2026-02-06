@@ -5,5 +5,13 @@ public class Main {
 
         System.out.println(pikachu);
         System.out.println(charmander);
+
+        Box<Pokemon> pokemonBox = new Box<>(pikachu);
+        Box<String> itemBox = new Box<>("Oran Berry");
+        Box<Integer> levelBox = new Box<>(25);
+
+        System.out.println(pokemonBox);
+        System.out.println(itemBox);
+        System.out.println(levelBox);
     }
 }
