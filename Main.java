@@ -13,5 +13,8 @@ public class Main {
         System.out.println(pokemonBox);
         System.out.println(itemBox);
         System.out.println(levelBox);
+
+        Pair<Pokemon, String> heldItem = new Pair<>(pikachu, "Oran Berry");
+        System.out.println(heldItem);
     }
 }
