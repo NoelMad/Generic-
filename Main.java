@@ -1,4 +1,11 @@
 public class Main {
+
+    public static <T> void swap(Box<T> a, Box<T> b) {
+        T temp = a.get();
+        a.set(b.get());
+        b.set(temp);
+    }
+    
     public static void main(String[] args) {
         Pokemon pikachu = new Pokemon("Pikachu", "Electric");
         Pokemon charmander = new Pokemon("Charmander", "Fire");
@@ -23,5 +30,11 @@ public class Main {
         BattlePokemon squirtle = new BattlePokemon("Squirtle", "Water", 60);
         PokemonOnlyBox<BattlePokemon> battleBox = new PokemonOnlyBox<>(squirtle);
         System.out.println(battleBox.get());
+
+        Box<String> a = new Box<>("Potion");
+        Box<String> b = new Box<>("Rare Candy");
+        System.out.println("Before: a=" + a.get() + ", b=" + b.get());
+            swap(a, b);
+        System.out.println("After:  a=" + a.get() + ", b=" + b.get());
     }
 }
