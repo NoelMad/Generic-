@@ -16,5 +16,8 @@ public class Main {
 
         Pair<Pokemon, String> heldItem = new Pair<>(pikachu, "Oran Berry");
         System.out.println(heldItem);
+
+        PokemonOnlyBox<Pokemon> b1 = new PokemonOnlyBox<>(pikachu);
+        System.out.println(b1.getType());
     }
 }
